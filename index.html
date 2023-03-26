@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Festival do Japão - Clone</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dragscroll/0.0.8/dragscroll.min.js"></script>
+        
+        <!-- scrollreveal -->
+        <script src="js/animation.js" defer></script>
+
+        <!-- Boostrap css -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous">
+        <!-- css -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Icones Boostrap -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <!-- JS Bootstrap -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+
+        <div class="container-fluid p-0">
+
+            <div id="contacts" class="container py-4 d-flex justify-content-around justify-content-center flex-column flex-md-row mx-auto">
+                <div class="d-flex justify-content-center">
+                    <i class="bi bi-geo-alt ms-1 pe-1"> |</i>
+                    <p>Rod. dos Imigrantes, KM 1.5 - São Paulo</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <i class="bi bi-telephone"> |</i>
+                    <p class="px-1">(11) 3277-6108 / 3277-8569</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <i class="bi bi-envelope"> |</i>
+                    <p class="px-1">secretaria@festivaldojapao.com.br</p>
+                </div>
+            </div>
+
+            <div class="container text-center">
+                <img id="ministerio-principal" src="img/Header-Ministério-desktop.png" style="width: 80%;" alt="">
+                <img id="ministerio-sedundario" class="d-md-none" src="img/Header-MinisteÌ_rio-1.png" style="width: 90%;" alt="">
+            </div>
+
+            <div class="container-fluid bg-primary-custom ">
+                <div class="container d-flex justify-content-end ps-5">
+                    <a href="" class="p-2 bg-third"><i class="bi bi-facebook fs-4 px-1 text-white"></i></a>
+                    <a href="" class="p-2 bg-third"><i class="bi bi-twitter fs-4 px-1 text-white"></i></a>
+                    <a href="" class="p-2 bg-third"><i class="bi bi-instagram fs-4 px-1 text-white"></i></a>
+                    <a href="" class="p-2 bg-third"><i class="bi bi-youtube fs-4 px-1 text-white"></i></a>                 
+                    <div id="ghost" class="ps-5 ms-5"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR -->
+        <header class="container-fluid sticky-top bg-white">
+            <nav class="container navbar navbar-expand-md h-auto px-5 me-5 " aria-label="Fourth navbar example">
+                <div class="container-fluid d-flex justify-content-between">
+                    <div style="height: 80px;" class="">
+                        <a href=""> <img src="img/cropped-Logo-24o-FJ-1.jpeg" style="width: 100%;" alt=""></a>
+                    </div>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+            
+                  <div class="collapse navbar-collapse" id="navbarsExample04">
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                      <li class="nav-item pe-4">
+                        <a class="nav-link " aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item dropdown pe-4">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">O Festival</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item pe-4">
+                        <a class="nav-link" href="#voluntarios">Voluntários</a>
+                      </li>
+                      <li class="nav-item dropdown pe-4">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Notícias</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link">Contato</a>
+                      </li>
+                      
+                    </ul>
+                    <button class="bg-primary-custom">
+                       <i class="bi bi-list fs-4"></i>
+                    </button>
+                    <button id="toggle-nav" class="">
+                        <i class="bi bi-search fs-4"></i>
+                    </button>
+                  </div>
+                </div>
+              </nav>
+        </header>
+
+        <!-- CARAOUSEL -->
+        <section>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/Banner-Site.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/Banner-Site.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden ">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+
+        <!-- NOTÍCIAS -->
+        <section class="animation">
+                <h2 class="text-center py-3 text-primary-color">NOTÍCIAS DO FESTIVAL</h2>
+
+                <div class="container d-flex overflow-x-scroll no-scrollbar mx-auto dragscroll pb-4" style="height: 600px;">
+   
+                        <div class="d-flex mx-auto">
+                            <div class="slide-card m-3">
+                                <img src="img/30_RafaelSalvador__R6_4831-700x465.jpg" alt="">
+                                <div class="">
+                                    <h5 class="ps-3 pt-3 fw-bold fs-3 text-primary-color">Exposição especial dos kenjinkais é destaque do Festival 2023</h5>
+                                    <div class="border-card mx-2"></div>
+                                    <p class="p-1 text-muted mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis iure sapiente explicabo expedita nihil sunt nam quos voluptate nemo reiciendis illum atque similique ipsa iusto error doloremque impedit sit</p>
+                                    <a href="#" class="d-block text-center text-decoration-none text-primary-color">ler mais</a>
+                                </div>
+                            </div>
+                            <div class="slide-card m-3">
+                                <img src="img/30_RafaelSalvador__R6_4831-700x465.jpg" alt="">
+                                <div class="">
+                                    <h5 class="ps-3 pt-3 fw-bold fs-3 text-primary-color">Exposição especial dos kenjinkais é destaque do Festival 2023</h5>
+                                    <div class="border-card mx-2"></div>
+                                    <p class="p-1 text-muted mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis iure sapiente explicabo expedita nihil sunt nam quos voluptate nemo reiciendis illum atque similique ipsa iusto error doloremque impedit sit</p>
+                                    <a href="#" class="d-block text-center text-decoration-none text-primary-color">ler mais</a>
+                                </div>
+                            </div>
+                            <div class="slide-card m-3">
+                                <img src="img/30_RafaelSalvador__R6_4831-700x465.jpg" alt="">
+                                <div class="">
+                                    <h5 class="ps-3 pt-3 fw-bold fs-3 text-primary-color">Exposição especial dos kenjinkais é destaque do Festival 2023</h5>
+                                    <div class="border-card mx-2"></div>
+                                    <p class="p-1 text-muted mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis iure sapiente explicabo expedita nihil sunt nam quos voluptate nemo reiciendis illum atque similique ipsa iusto error doloremque impedit sit</p>
+                                    <a href="#" class="d-block text-center text-decoration-none text-primary-color">ler mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex mx-auto">
+                            <div class="slide-card m-3">
+                                <img src="img/30_RafaelSalvador__R6_4831-700x465.jpg" alt="">
+                                <div class="">
+                                    <h5 class="ps-3 pt-3 fw-bold fs-3 text-primary-color">Exposição especial dos kenjinkais é destaque do Festival 2023</h5>
+                                    <div class="border-card mx-2"></div>
+                                    <p class="p-1 text-muted mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis iure sapiente explicabo expedita nihil sunt nam quos voluptate nemo reiciendis illum atque similique ipsa iusto error doloremque impedit sit</p>
+                                    <a href="#" class="d-block text-center text-decoration-none text-primary-color">ler mais</a>
+                                </div>
+                            </div>
+                            <div class="slide-card m-3">
+                                <img src="img/30_RafaelSalvador__R6_4831-700x465.jpg" alt="">
+                                <div class="">
+                                    <h5 class="ps-3 pt-3 fw-bold fs-3 text-primary-color">Exposição especial dos kenjinkais é destaque do Festival 2023</h5>
+                                    <div class="border-card mx-2"></div>
+                                    <p class="p-1 text-muted mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis iure sapiente explicabo expedita nihil sunt nam quos voluptate nemo reiciendis illum atque similique ipsa iusto error doloremque impedit sit</p>
+                                    <a href="#" class="d-block text-center text-decoration-none text-primary-color">ler mais</a>
+                                </div>
+                            </div>
+                            <div class="slide-card m-3">
+                                <img src="img/30_RafaelSalvador__R6_4831-700x465.jpg" alt="">
+                                <div class="">
+                                    <h5 class="ps-3 pt-3 fw-bold fs-3 text-primary-color">Exposição especial dos kenjinkais é destaque do Festival 2023</h5>
+                                    <div class="border-card mx-2"></div>
+                                    <p class="p-1 text-muted mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis iure sapiente explicabo expedita nihil sunt nam quos voluptate nemo reiciendis illum atque similique ipsa iusto error doloremque impedit sit</p>
+                                    <a href="#" class="d-block text-center text-decoration-none text-primary-color">ler mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+ 
+        <!-- SOBRE NOIS -->
+        
+        </section>
+
+        <!-- SOBRE NOIS -->
+        <section class="animation">
+            <div class="banner position-relative w-100">
+                <!-- <video muted lopp autoplay>
+                    <source src="movie/videoplayback (3)_1.mp4" type="video/mp4">
+               
+                </video> -->
+                    <div id="gif"></div>
+    
+                    <h2 class="position-absolute top-0 start-50 translate-middle fw-bold text-primary-color bg-white p-2" style="width: max-content; margin-top: 120px;">SOBRE O FESTIVAL</h3>
+                    <h4 class="position-absolute top-50 start-50 translate-middle fw-bold text-white w-100 text-center">O Festival do Japão está de volta!</h4>
+                    <p class="fs-4 position-absolute top-50 start-50 translate-middle text-white" style="margin-top: 90px;">A 24º edição do evento vai acontecer em julho de 2023.</p>
+
+            </div>
+        </section>
+
+        <!-- INFOS -->
+        <section class="animation">
+            <div class="container mx-auto">
+
+                <div class="row-cols-2 row-cols-md-4 d-flex flex-wrap py-4">
+    
+                    <div class="col text-center p-3 ">
+                        <a href="" class="text-decoration-none">
+                            <i class="bi bi-journal-text fs-1 text-primary-color"></i>
+                            <h4 class="fw-bold text-primary-color">Guia</h4>
+                        </a>
+                    </div>
+                    <div class="col text-center p-3 ">
+                        <a href="" class="text-decoration-none">
+                            <i class="bi bi-car-front-fill fs-1 text-primary-color"></i>
+                            <h4 class="fw-bold text-primary-color">Como Chegar</h4>
+                        </a>
+                    </div>
+                    <div class="col text-center p-3 ">
+                        <a href="" class="text-decoration-none">
+                            <i class="bi bi-search fs-1 text-primary-color"></i>
+                            <h4 class="fw-bold text-primary-color">Expositores</h4>
+                        </a>
+                    </div>
+                    <div class="col text-center p-3 ">
+                        <a href="" class="text-decoration-none">
+                            <i class="bi bi-mic-fill fs-1 text-primary-color"></i>
+                            <h4 class="fw-bold text-primary-color">Imprensa</h4>
+                        </a>
+                    </div>
+                    <div class="col text-center p-3 ">
+                        <a href="" class="text-decoration-none">
+                            
+                            <i class="bi bi-person-badge-fill fs-1 text-primary-color"></i>
+                            <h4 class="fw-bold text-primary-color">Voluntários</h4>
+                        </a>
+                    </div>
+                    <div class="col text-center p-3 ">
+                        <a href="" class="text-decoration-none">
+                            <i class="bi bi-wechat fs-1 text-primary-color"></i>
+                            <h4 class="fw-bold text-primary-color">Simpósio</h4>
+                        </a>
+                    </div>
+                    <div class="col text-center p-3 ">
+                        <a href="" class="text-decoration-none">
+                            <i class="bi bi-bus-front-fill fs-1 text-primary-color"></i>
+                            <h4 class="fw-bold text-primary-color">Caravanas</h4>
+                        </a>
+                    </div>
+                    <div class="col text-center p-3 ">
+                        <a href="" class="text-decoration-none">
+                            <i class="bi bi-ticket-perforated-fill fs-1 text-primary-color"></i>
+                            <h4 class="fw-bold text-primary-color">Ingressos</h4>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- VOLUNTÁRIOS -->
+        <section id="voluntarios">
+            
+          
+            <div  class="text-center position-relative">
+                <div id="voluntario"></div>
+                <div class="position-absolute top-50 start-50 translate-middle w-100">
+                    <h2 class="fw-bold text-primary-color bg-white p-2 d-inline-block text-center mt-5">SEJA VOLUNTÁRIO</h3>
+                    <h4 class="fw-bold text-white w-100 text-center mt-3 p-3">Faça seu cadastro para ser voluntário no 24º FESTIVAL DO JAPÃO, que será realizado pelo KENREN em 2023!</h4>
+                    <a href="" class="btn btn-lg btn-custom mt-5 text-white fw-bold">EM BREVE</a>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- PATROCÍNIO MASTER -->
+        <section>
+            <h2 class="text-primary-color text-center mt-4 fw-bold">PATROCÍNIO MASTER</h2>
+            <div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 mx-auto d-flex justify-content-around my-4">
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/bradesco.fw_.png" style="width: 60%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/lei-de-incentivo-a-cultura.png" style="width: 60%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/proac.png" style="width: 60%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="" style="width: 50%;" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- PATROCÍNIO -->
+        <section>
+            <h2 class="text-primary-color text-center mt-4 fw-bold">PATROCÍNIO</h2>
+            <div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 mx-auto d-flex justify-content-around my-4">
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/Band-News.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/Bandeirantes-TV.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/Comgas.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/correios.fw_.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/hirota-food-.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/Honda.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/hosp-nipo-brasileiro.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/hosp-santa-cruz.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/Mitsubishi.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/Nissan.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/NTT.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/Panasonic-1.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/Radio-Bandeirantes.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/Bandeirantes-TV.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/sakura.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/toyota.fw_.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/patrocinio/Yokogawa.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="" style="width: 30%;" alt="">
+                </div>
+            </div>
+        </section>
+        
+        <!-- APOIO -->
+        <section>
+            <h2 class="text-primary-color text-center mt-4 fw-bold">APOIO</h2>
+            <div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 mx-auto d-flex justify-content-around my-4">
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/Apoio/Alfa.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/Apoio/Hinomoto-1.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/Apoio/Hisamitsu-1.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/Apoio/Kikkoman.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/Apoio/Nachi.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/Apoio/Nachi.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/Apoio/Sansuy.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/Apoio/Hisamitsu-1.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/Apoio/Tecfogoes.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/Apoio/Yamaha-1.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="" style="width: 50%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="" style="width: 50%;" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- COLABORADORES -->
+        <section>
+            <h2 class="text-primary-color text-center mt-4 fw-bold">COLABORADORES</h2>
+            <div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 mx-auto d-flex justify-content-around my-4">
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/colaboradores/NGK.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/colaboradores/Nitto-1.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/colaboradores/Sanrio-1.png" style="width: 40%;" alt="">
+                </div>
+                
+            </div>
+        </section>
+        
+        <!-- APOIO GOVERNAMENTAL -->
+        <section>
+            <h2 class="text-primary-color text-center mt-4 fw-bold">APOIO GOVERNAMENTAL</h2>
+            <div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 mx-auto d-flex justify-content-around my-4">
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-governamental/cet.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-governamental/Cidade-de-SP-Turismo.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-governamental/consulado-do-japao.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-governamental/japan-foundation-sp.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-governamental/japan-house.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-governamental/japonese-food-suporter.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-governamental/maff.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-governamental/ministério-da-agricultura.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-governamental/policia-militar.png" style="width: 40%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-governamental/pref-de-sao-paulo-1.png" style="width: 40%;" alt="">
+                </div>               
+                
+            </div>
+
+        </section>
+
+        <!-- APOIO CULTURAL -->
+        <section>
+            <h2 class="text-primary-color text-center mt-4 fw-bold">APOIO CULTURAL</h2>
+            <div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 mx-auto d-flex justify-content-around my-4">
+                
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-cultural/fundaçao-kunito.png" style="width: 50%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/apoio-cultural/sp-expo.png" style="width: 50%;" alt="">
+                </div>
+                            
+                
+            </div>
+
+        </section>
+       
+        <!-- REALIZAÇÃO -->
+        <section>
+            <h2 class="text-primary-color text-center mt-4 fw-bold">REALIZAÇÃO</h2>
+            <div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 mx-auto d-flex justify-content-around my-4">
+                
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/realização/gov-sp.png" style="width: 50%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/realização/kenren-1-300x69.png" style="width: 50%;" alt="">
+                </div>
+                <div class="col text-center py-2">
+                    <img src="img/patrocinios/realização/patria-amada-e1658874983592.png" style="width: 50%;" alt="">
+                </div>
+                            
+                
+            </div>
+
+        </section>
+
+        <footer class="position-relative    ">
+            <!-- <div id="footer">
+
+            </div> -->
+            <div id="footer" class="">
+             
+                
+
+            </div>
+            <div class="position-absolute top-50 start-50 translate-middle border-bottom row d-flex flex-column flex-md-row h-75 container w-100 justify-content-center align-content-center">
+                <div class="col text-white">
+                    <h1>24º FJ – 2023</h1>
+                    <p>Rua São Joaquim, 381
+                        sala 51 - 5º andar,
+                        Liberdade São Paulo – SP
+                        Cep 01508-001</p>
+                    <div>
+                        <p><span class="fw-bold">Tel: </span> (11) 3277-6108 / 3277-8569</p>
+                        <p><span class="fw-bold pe-1">E-mail:</span><a class="text-decoration-none link-third" href=mailto:"secretaria@festivaldojapao.com.br">secretaria@festivaldojapao.com.br</a></p>
+                    </div>
+    
+                </div>
+                <div class="col mt-5 text-white">
+                    <h1>EVENTO:</h1>
+                    <p>A 24º edição do Festival do Japão será realizada em julho de 2023. Contamos com a sua presença!</p>
+                </div>
+                
+                <p class="position-absolute top-100 start-50 translate-middle text-white text-center fs-6 mute pt-5">Copyright All right reserved - Festival do Japão 2020</p>
+
+            </div>
+            
+           
+        </footer>
+
+        <!-- scrollreveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+    </body>
+
+
+
+</html>

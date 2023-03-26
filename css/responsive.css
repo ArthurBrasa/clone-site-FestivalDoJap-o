@@ -1,0 +1,21 @@
+@media (max-width: 1003px) {
+
+    /*  */
+    #contacts{ 
+        font-size: 0.6rem;
+    }
+    
+ }
+
+
+ @media (max-width: 768px) {
+
+    /*  */
+    #ministerio-principal {
+        display: none;
+    }
+    #ghost{
+        display: none;
+    }
+
+ }

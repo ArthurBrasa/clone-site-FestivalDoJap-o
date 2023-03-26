@@ -1,0 +1,13 @@
+/* div.banner video{
+    width: 100%;
+    height: 500px;
+    border: none;
+    object-fit: cover;
+} */
+div#gif{
+    
+    background-image: url(../img/gifs/ezgif-2-1d37822bf91.gif);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
